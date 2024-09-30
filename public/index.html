@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module Hijacking Example</title>
+</head>
+
+<body>
+    <h1>Module Hijacking Demo</h1>
+    <p>Click the button below to run the backend module.</p>
+    <button onclick="runModule()">Run Module</button>
+
+    <p id="result"></p>
+
+    <script>
+        function runModule() {
+            fetch('/run-module')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('result').innerText = data;
+                })
+                .catch(error => {
+                    document.getElementById('result').innerText = 'Error occurred!';
+                });
+        }
+    </script>
+    
+</body>
+
+</html>
