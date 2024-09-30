@@ -5,7 +5,7 @@ const fs = require('fs');
 const crypto = require('crypto');
 
 
-// Integrity check, through validateModule() method 
+// MIGIATION METHOD - Integrity check, through validateModule() method 
 /*
 function validateModule(modulePath) {
     const expectedHash = 'bd3445ad7bb66033fa5522d860d4dbeb2af6cd174c19f1920876bb0b9fe53eaf';  
@@ -20,15 +20,14 @@ function validateModule(modulePath) {
 
 // Endpoint to run the module
 router.get('/run-module', (req, res) => {
-    // Path to module - can alter to unsafe module
-    const modulePath = path.resolve(__dirname, 'modules', 'untrusted-module.js');
+    const modulePath = path.resolve(__dirname, 'modules', 'trusted-module.js');     // Path to module - can alter to unsafe module
     
-    // Unsafe code here (no validation)
+    // UNSAFE CODE (no validation). Comment out this, and uncomment mitigation methods to run the mitigation methods.
     const trustedModule = require(modulePath);
     res.send(trustedModule.run());
 
+    // MITIGATION METHOD
     /*
-    validateModule() is a mitigation method here
     if (validateModule(modulePath)) {
        const trustedModule = require(modulePath);
         res.send(trustedModule.run());
@@ -37,9 +36,6 @@ router.get('/run-module', (req, res) => {
     }
     */
 
-
 });
-
-
 
 module.exports = router;
