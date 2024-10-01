@@ -12,5 +12,5 @@ app.use('/', routes);
 // Start the server
 const port = 3000;
 app.listen(port, () => {
-    console.log(`App running on http://localhost:${port}`);
+    console.log(`App running on https://localhost:${port}`);
 });
