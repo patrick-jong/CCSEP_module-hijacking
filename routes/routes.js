@@ -20,7 +20,7 @@ function validateModule(modulePath) {
 
 // Endpoint to run the module
 router.get('/run-module', (req, res) => {
-    const modulePath = path.resolve(__dirname, 'modules', 'trusted-module.js');     // Path to module - can alter to unsafe module
+    const modulePath = path.resolve(__dirname, '../modules/trusted-module.js');     // Path to module - can alter to unsafe module
     
     // UNSAFE CODE (no validation). Comment out this, and uncomment mitigation methods to run the mitigation methods.
     const trustedModule = require(modulePath);
