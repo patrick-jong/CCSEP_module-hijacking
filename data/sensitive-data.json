@@ -1,0 +1,7 @@
+{
+    "users": [
+      { "name": "Patrick Jong", "password": "ilovechaewon123", "ssn": "123-45-6789" },
+      { "name": "Bhuvan Lau", "password": "iloveIU123", "ssn": "987-65-4321" }
+    ]
+  }
+  
