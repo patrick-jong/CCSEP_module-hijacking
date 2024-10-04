@@ -1,4 +1,5 @@
-// This is the unsafe module 
+// This is the unsafe module, stealing sensitive data from the database
+
 const fs = require('fs');
 const path = require('path');  
 
