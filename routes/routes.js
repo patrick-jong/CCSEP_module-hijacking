@@ -8,7 +8,7 @@ const crypto = require('crypto');
 // MIGIATION METHOD - Integrity check, through validateModule() method 
 /*
 function validateModule(modulePath) {
-    const expectedHash = 'bd3445ad7bb66033fa5522d860d4dbeb2af6cd174c19f1920876bb0b9fe53eaf';  
+    const expectedHash = 'b14c76a1b32226e20bafabbd0287b5d2deec81ea84b520cf2fd325ce4e678082';  
         // Hash found using: shasum -a 256 modules/trusted-module.js
     const fileBuffer = fs.readFileSync(modulePath);
     const hashSum = crypto.createHash('sha256');
